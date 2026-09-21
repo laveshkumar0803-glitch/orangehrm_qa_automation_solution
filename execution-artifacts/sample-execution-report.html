@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Execution Report - OrangeHRM QA Assessment</title>
+<style>body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;line-height:1.5;color:#222}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:8px;text-align:left}th{background:#f4f4f4}.note{padding:12px;background:#fff7d6;border-left:4px solid #d9a300}</style></head>
+<body>
+<h1>OrangeHRM Employee Lifecycle - Execution Report</h1>
+<p class="note"><strong>Template / pre-run report:</strong> This file documents expected execution coverage. Run <code>npm test</code> to generate the actual Playwright HTML report in <code>playwright-report/</code> and runtime video under <code>test-results/</code>. No test result is fabricated in this package.</p>
+<table>
+<tr><th>Step</th><th>Validation</th><th>Runtime Evidence</th></tr>
+<tr><td>Login</td><td>Dashboard visible</td><td>Playwright assertion</td></tr>
+<tr><td>Add Employee</td><td>Personal Details page displayed</td><td>Playwright assertion + video</td></tr>
+<tr><td>API Create</td><td>Response matches employee data</td><td>API assertions</td></tr>
+<tr><td>Edit Job</td><td>Job Title / Employment Status persisted</td><td>UI assertions + toast</td></tr>
+<tr><td>API Update</td><td>API payload/response matches UI data</td><td>API assertions</td></tr>
+<tr><td>Delete</td><td>Employee absent in UI + API delete succeeds</td><td>UI/API assertions</td></tr>
+<tr><td>Logout</td><td>Login page + protected URL redirect</td><td>URL/UI assertions</td></tr>
+</table>
+</body></html>

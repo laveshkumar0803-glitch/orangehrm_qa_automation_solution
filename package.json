@@ -1,0 +1,16 @@
+{
+  "name": "orangehrm-employee-lifecycle-playwright",
+  "version": "1.0.0",
+  "description": "QA Automation Technical Assessment - Employee Lifecycle Management using Playwright JavaScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:employee": "playwright test tests/employeeLifecycle.spec.js",
+    "report": "playwright show-report",
+    "debug": "playwright test --debug"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "dotenv": "^17.2.2"
+  }
+}
