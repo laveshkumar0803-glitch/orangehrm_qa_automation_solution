@@ -55,13 +55,13 @@ class PimPage {
 
   async openEmployeeFromSearch(employeeId) {
     const row = this.rowByEmployeeId(employeeId);
-    await row.getByRole('button').last().click();
+    await row.getByRole('button').nth(0).click();
   }
 
   async deleteEmployeeFromSearch(employeeId) {
     const row = this.rowByEmployeeId(employeeId);
     const buttons = row.getByRole('button');
-    await buttons.nth(0).click();
+    await buttons.nth(1).click();
     await this.page.getByRole('button', { name: /Yes, Delete/i }).click();
   }
 }

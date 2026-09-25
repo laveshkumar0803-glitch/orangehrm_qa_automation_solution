@@ -16,8 +16,9 @@ class ApiClient {
   }
 
   async updateEmployeeSnapshot(id, employee) {
-    return this.request.put(`${this.baseURL}/users/${id}`, {
+    return this.request.patch(`${this.baseURL}/users/${id}`, {
       data: {
+        id,
         name: employee.fullName,
         employeeId: employee.employeeId,
         jobTitle: employee.jobTitle,

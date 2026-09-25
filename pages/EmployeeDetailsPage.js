@@ -14,7 +14,7 @@ class EmployeeDetailsPage {
 
   async selectDropdown(dropdown, value) {
     await dropdown.click();
-    const option = this.page.getByRole('option', { name: value });
+    const option = this.page.getByRole('option', { name: value, exact: true }).first();
     await option.click();
   }
 
